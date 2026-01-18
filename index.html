@@ -9,7 +9,8 @@
     <script src="https://unpkg.com/lucide@0.263.1/dist/umd/lucide.min.js"></script>
     <style>
         body {
-            font-family: 'Comic Neue', cursive;
+            font-family: 'Neucha', cursive;
+            font-size: 1.2rem;
             background-color: #f0f4f8;
             background-image: radial-gradient(#cbd5e0 1px, transparent 1px);
             background-size: 20px 20px;
@@ -166,6 +167,7 @@
             {
                 name: "Štěpánka Jislová",
                 url: "https://www.jislova.com/",
+                video: "https://www.youtube.com/watch?v=jqBS0J5qbrs&t=3s",
                 category: "czech",
                 tags: ["Grafický román", "Ilustrace", "Autobiografie"],
                 desc: "Výrazná autorka grafických románů (Bez vlasů, Srdcovka). Moderní vizuální styl a silná témata.",
@@ -177,13 +179,14 @@
                 url: "https://www.instagram.com/nikkarin/",
                 category: "czech",
                 tags: ["Sci-fi", "Dobrodružné", "Hravost"],
-                desc: "Autor kultovní série '130' a hravých stripů. Skvělý smysl pro detail a budování světů.",
+                desc: "Autor kultovní série '130', série 'Hubert a Hugo' a hravých stripů. Skvělý smysl pro detail a budování světů.",
                 color: "bg-blue-100",
                 image: "nikkarin.jpg"
             },
             {
                 name: "Lucie Lomová",
                 url: "https://lucielomova.blogspot.com/",
+                video: "https://www.youtube.com/watch?v=8Uqht9n3RwA&t=2823s",
                 category: "czech",
                 tags: ["Klasika", "Detektivní", "Děti i dospělí"],
                 desc: "Legenda českého komiksu (Anča a Pepík), autorka oceňovaných grafických románů (Divoši).",
@@ -193,6 +196,7 @@
             {
                 name: "Dan Černý",
                 url: "https://www.facebook.com/dckomiks/?locale=cs_CZ",
+                video: "https://www.youtube.com/watch?v=l5J_QbsOl-Q&t=3213s",
                 category: "czech",
                 tags: ["Humor", "Strips", "Horor-komedie"],
                 desc: "Král českého humorného stripu a komiksu (Jelita, Fanouš). Čistá linka a břitký humor.",
@@ -212,6 +216,7 @@
             {
                 name: "Jiří Grus",
                 url: "https://jirigrus.blogspot.com/",
+                video: "https://www.youtube.com/watch?v=jSwe6AfoCDI&t=25s",
                 category: "czech",
                 tags: ["Akční", "Realistická kresba", "Voleman"],
                 desc: "Mistr dynamické kresby a anatomie. Autor série Voleman a Dračí hlídka.",
@@ -266,6 +271,7 @@
             {
                 name: "Michael Petrus",
                 url: "https://michaelpetrus.com/",
+                video: "https://www.youtube.com/watch?v=glGgzkBzCgc&t=98s",
                 category: "czech",
                 tags: ["Digitální umění", "Ilustrace", "Komiks"],
                 desc: "Art director a ilustrátor se zaměřením na moderní digitální komiks a brand design.",
@@ -405,6 +411,7 @@
             {
                 name: "Richard Svitalský",
                 url: "http://www.svitalsky.com/",
+                video: "https://www.youtube.com/watch?v=6SSDHkmIBik&t=34s",
                 category: "czech",
                 tags: ["Humor", "Čtyřlístek", "Dobrodružství"],
                 desc: "Dlouholetý autor Čtyřlístku a dobrodružných komiksů pro mládež (Sedmikráskov).",
@@ -447,7 +454,7 @@
                 url: "https://comicsdb.cz/serie/1/aargh",
                 category: "edu",
                 tags: ["Sborník", "Kultovní", "Český komiks"],
-                desc: "Legendární český komiksový sborník mapující to nejlepší z domácí alternativní scény.",
+                desc: "Legendární český komiksový sborník mapující to nejlepší z domácí i světové scény.",
                 color: "bg-red-50",
                 image: "aargh.jpg"
             },
@@ -461,7 +468,26 @@
                 color: "bg-purple-100",
                 image: "kopec.jpg"
             },
-            // NOVÝ: FRAME Festival (před LUSTR)
+            
+            {
+                name: "Komiksová databáze",
+                url: "https://comicsdb.cz/",
+                category: "edu",
+                tags: ["Databáze", "Aktuality", "Autoři"],
+                desc: "ComicsDB.cz je česká komunitní databáze sloužící k přehledné evidenci, hodnocení a vyhledávání komiksů, sérií, autorů a vydání českých i zahraničních komiksů dostupných na českém trhu.",
+                color: "bg-red-100",
+                image: "comicsdb.jpg"
+            },
+             {
+                name: "Jiří Walker Procházka",
+                url: "https://www.jwp-prochazka.cz/",
+                video: "https://www.youtube.com/watch?v=Gkxf5Pws8sU&t=1915s",
+                category: "edu",
+                tags: ["Popularizace", "Workshopy", "Vzdělávání"],
+                desc: "Jiří Walker Procházka je výrazná osobnost českého komiksu, dlouhodobě se věnuje popularizaci a výuce, systematicky vzdělává autory, čtenáře i školáky v porozumění komiksu jako svébytnému vyjadřovacímu médiu.",
+                color: "bg-yellow-100",
+                image: "prochazka.jpg"
+            },
             {
                 name: "FRAME Festival",
                 url: "https://framefestival.cz/",
@@ -620,6 +646,12 @@
                             ${item.desc}
                         </div>
 
+                        ${item.video ? `
+                        <a href="${item.video}" target="_blank" class="mb-4 flex items-center justify-center gap-2 w-full bg-red-500 text-white py-2 font-bold border-2 border-black shadow-[3px_3px_0px_#000] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[1px_1px_0px_#000] transition-all hover:bg-red-600 relative z-20">
+                            <i data-lucide="youtube" class="w-5 h-5"></i>
+                            <span>Přednáška na YouTube nahraná v rámci projektu Sketch na SPŠE a VOŠ Pardubice</span>
+                        </a>
+                        ` : ''}
                         <div class="card-image-container mb-4">
                             <img src="images/${item.image}" alt="Ukázka díla - ${item.name}" class="card-image" loading="lazy">
                         </div>
