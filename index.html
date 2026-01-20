@@ -703,6 +703,10 @@
                     btn.classList.add('active');
                     if(btn.dataset.filter === 'all') btn.classList.add('bg-black', 'text-white');
                     
+                    if (btn.dataset.filter === 'all') {
+                        searchInput.value = ''; 
+                    }
+
                     renderCards(btn.dataset.filter, searchInput.value);
                 });
             });
