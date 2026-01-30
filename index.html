@@ -196,6 +196,8 @@
                 name: "Dan Černý",
                 url: "https://www.facebook.com/dckomiks/?locale=cs_CZ",
                 video: "https://www.youtube.com/watch?v=l5J_QbsOl-Q&t=3213s",
+                video2: "https://www.youtube.com/watch?v=zl_ZRo_Ltds",
+                video2_text: "JAK VYTVOŘIT KOMIKSOVÝ PŘÍBĚH - VIDEOTUTORIÁL",
                 category: "czech",
                 tags: ["Humor", "Strips", "Horor-komedie"],
                 desc: "Král českého humorného stripu a komiksu (Jelita, Fanouš). Čistá linka a břitký humor.",
@@ -419,7 +421,16 @@
                 image: "svitalsky.jpg"
             },
             
-            // NOVÝ: Lukáš Fibrich (vedle Kopla)
+            {
+                name: "Láďa Horák",
+                url: "https://www.artbyloplosiq.cz/",
+                category: "czech",
+                tags: ["Gočár", "KAFKA'S METAMORPHOSIS", "KRVAVÝ MĚSÍC", '<a href="https://sketch.spse.cz/" target="_blank" class="hover:underline text-white">SKETCH</a>'],
+                desc: "Mladý začínající autor, jehož komiksová tvorba stihla uspět v několika českých prestižních projektech a soutěžích.",
+                color: "bg-purple-100",
+                image: "horak.jpg"
+            },
+
             {
                 name: "Lukáš Fibrich",
                 url: "https://www.fibrich.cz/",
@@ -672,6 +683,13 @@
     <a href="${item.video}" target="_blank" class="mb-4 flex items-center justify-center gap-2 w-full bg-red-500 text-white py-2 font-bold border-2 border-black shadow-[3px_3px_0px_#000] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[1px_1px_0px_#000] transition-all hover:bg-red-600 relative z-20" style="font-family: 'Montserrat', sans-serif;">
         <i data-lucide="youtube" class="w-5 h-5"></i>
         <span class="text-xs">Přednáška na YouTube v rámci projektu Sketch na SPŠE a VOŠ Pardubice</span>
+    </a>
+    ` : ''}
+
+    ${item.video2 ? `
+    <a href="${item.video2}" target="_blank" class="mb-4 flex items-center justify-center gap-2 w-full bg-red-500 text-white py-2 font-bold border-2 border-black shadow-[3px_3px_0px_#000] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[1px_1px_0px_#000] transition-all hover:bg-red-600 relative z-20" style="font-family: 'Montserrat', sans-serif;">
+        <i data-lucide="youtube" class="w-5 h-5"></i>
+        <span class="text-xs">${item.video2_text || 'Video'}</span>
     </a>
     ` : ''}
 
