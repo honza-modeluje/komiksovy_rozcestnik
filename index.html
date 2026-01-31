@@ -119,7 +119,7 @@
                 <h1 class="text-4xl md:text-6xl text-black">KOMIKSOVÝ ROZCESTNÍK</h1>
             </div>
             <p class="text-xl md:text-2xl font-bold mt-4 font-sans max-w-2xl mx-auto bg-white/80 p-2 border-2 border-black rounded-lg">
-                Vizuální výběr kvalitních českých i některých zahraničních tvůrců pro studenty a fanoušky komiksu.
+                Výběr kvalitních českých i některých zahraničních tvůrců a českých magazínů a dalších zdrojů pro studenty a fanoušky komiksu.
             </p>
         </div>
     </header>
@@ -128,14 +128,14 @@
         <div class="flex flex-col md:flex-row gap-4 items-center justify-between">
             
             <div class="w-full md:w-1/3 relative">
-                <input type="text" id="searchInput" placeholder="Autor či styl..." class="search-input w-full p-3 rounded-lg text-lg font-sans pl-10">
+                <input type="text" id="searchInput" placeholder="Vyhledávání" class="search-input w-full p-3 rounded-lg text-lg font-sans pl-3">
                 <i data-lucide="search" class="absolute left-3 top-3.5 w-5 h-5 text-gray-500"></i>
             </div>
 
             <div class="flex flex-wrap gap-2 justify-center" id="filterContainer">
                 <button class="filter-btn active px-4 py-2 rounded-full bg-white text-black" data-filter="all">Vše</button>
-                <button class="filter-btn px-4 py-2 rounded-full bg-blue-100 text-blue-900 border-blue-900 hover:bg-blue-900" data-filter="czech">🇨🇿 Čeští tvůrci</button>
-                <button class="filter-btn px-4 py-2 rounded-full bg-red-100 text-red-900 border-red-900 hover:bg-red-900" data-filter="foreign">🌍 Světoví</button>
+                <button class="filter-btn px-4 py-2 rounded-full bg-blue-100 text-blue-900 border-blue-900 hover:bg-blue-900" data-filter="czech">🇨🇿 Čeští tvůrci (aktivní či nejznámější)</button>
+                <button class="filter-btn px-4 py-2 rounded-full bg-red-100 text-red-900 border-red-900 hover:bg-red-900" data-filter="foreign">🌍 Světoví (mini výběr)</button>
                 <button class="filter-btn px-4 py-2 rounded-full bg-green-100 text-green-900 border-green-900 hover:bg-green-900" data-filter="edu">🏛️ Instituce & Zdroje</button>
             </div>
         </div>
@@ -187,7 +187,7 @@
                 name: "Nikkarin",
                 url: "https://www.instagram.com/nikkarin/",
                 category: "czech",
-                tags: ["Sci-fi", "Dobrodružné", "Hravost"],
+                tags: ["Sci-fi", "Dobrodružné", "Hravost", "Hubert a Hugo", "Super Spellsword Sága"],
                 desc: "Autor kultovní série '130', série 'Hubert a Hugo' a hravých stripů. Skvělý smysl pro detail a budování světů.",
                 color: "bg-blue-100",
                 image: "nikkarin.jpg"
@@ -209,7 +209,7 @@
                 video2: "https://www.youtube.com/watch?v=zl_ZRo_Ltds",
                 video2_text: "JAK VYTVOŘIT KOMIKSOVÝ PŘÍBĚH - VIDEOTUTORIÁL",
                 category: "czech",
-                tags: ["Humor", "Strips", "Horor-komedie"],
+                tags: ["Humor", "Strips", "Horor-komedie", "Fanouš", "Tryskošnek", "Kňour a Mník"],
                 desc: "Král českého humorného stripu a komiksu (Jelita, Fanouš). Čistá linka a břitký humor.",
                 color: "bg-yellow-100",
                 image: "dan_cerny.jpg"
@@ -294,7 +294,7 @@
                 name: "Tomáš Kučerovský",
                 url: "https://tomaskucerovsky.weebly.com/comics.html",
                 category: "czech",
-                tags: ["Kresba", "Architektura", "Detaily"],
+                tags: ["Kresba", "Architektura", "Detaily", "Aargh"],
                 desc: "Precizní kreslíř a ilustrátor. Jeho komiksová tvorba vyniká technickou zdatností.",
                 color: "bg-emerald-100",
                 image: "kucerovsky.jpg"
@@ -376,9 +376,9 @@
                 name: "Michal Suchánek",
                 url: "https://www.michalsuchanek.cz/",
                 category: "czech",
-                tags: ["Sci-fi", "Realismus", "Fotografické"],
+                tags: ["Sci-fi", "Realismus", "Propracovaná kresba"],
                 desc: "Autor komiksů jako 'Děsivé radosti'. Velmi realistický, až filmový styl.",
-                color: "bg-stone-200",
+                color: "bg-yellow-200",
                 image: "suchanek.jpg"
             },
             // NOVÝ: Jonáš Ledecký (vedle Suchánka)
@@ -396,9 +396,9 @@
                 name: "Viktor Svoboda",
                 url: "https://viktorsvoboda.tumblr.com/",
                 category: "czech",
-                tags: ["Linka", "Sci-fi", "Noir"],
+                tags: ["Osobitá linka", "Sci-fi", "Noir"],
                 desc: "Výrazný kreslíř s precizní, čistou linkou. Spoluautor komiksů jako Supro: Hrdinové na dluh.",
-                color: "bg-slate-200",
+                color: "bg-green-200",
                 image: "svoboda.jpg"
             },
             // NOVÝ: Lenka Šimečková (vedle Svobody)
@@ -421,11 +421,21 @@
                 image: "pokorny.jpg"
             },
             {
+                name: "Jaroslav Němeček",
+                url: "https://chrz.wz.cz/?stranka=502",
+                video: "https://edu.ceskatelevize.cz/video/16646-kreslir-ctyrlistku-jaroslav-nemecek",
+                category: "czech",
+                tags: ["Humor", "Čtyřlístek", "Dobrodružství", '<a href="https://eshop.ctyrlistek.cz/ctyrlistek-prvni-pulstoleti-v-treskoprskach" target="_blank" class="hover:underline text-white">ČTYŘLÍSTEK - První půlstoletí v Třeskoprskách</a>'],
+                desc: "Půl století tvořící autor Čtyřlístku, držitel státního vyznamenání.",
+                color: "bg-orange-300",
+                image: "ctyrlistek.jpg"
+            },
+            {
                 name: "Richard Svitalský",
                 url: "http://www.svitalsky.com/",
                 video: "https://www.youtube.com/watch?v=6SSDHkmIBik&t=34s",
                 category: "czech",
-                tags: ["Humor", "Čtyřlístek", "Dobrodružství"],
+                tags: ["Humor", "Čtyřlístek", "Dobrodružství", "Sedmikráskov"],
                 desc: "Dlouholetý autor Čtyřlístku a dobrodružných komiksů pro mládež (Sedmikráskov).",
                 color: "bg-orange-50",
                 image: "svitalsky.jpg"
@@ -435,7 +445,7 @@
                 name: "Láďa Horák",
                 url: "https://www.artbyloplosiq.cz/",
                 category: "czech",
-                tags: ["Gočár", "KAFKA'S METAMORPHOSIS", "KRVAVÝ MĚSÍC", '<a href="https://sketch.spse.cz/" target="_blank" class="hover:underline text-white">SKETCH</a>'],
+                tags: ["Gočár", "KAFKA'S METAMORPHOSIS", "KRVAVÝ MĚSÍC", "Kingdom Come: Deliverance", '<a href="https://sketch.spse.cz/" target="_blank" class="hover:underline text-white">SKETCH</a>'],
                 desc: "Mladý začínající autor, jehož komiksová tvorba stihla uspět v několika českých prestižních projektech a soutěžích.",
                 color: "bg-purple-100",
                 image: "horak.jpg"
@@ -477,6 +487,51 @@
                 color: "bg-blue-70",
                 image: "krausova.jpg"
             },
+            {
+                name: "Renata Wilfling",
+                url: "https://www.artstation.com/wilfling",
+                category: "czech",
+                tags: ["Komiks", "Ilustrace", "Grafický román"],
+                desc: "Je výraznou postavou současné české komiksové scény, která do žánru vnáší specifický, velmi jemný a hloubavý přístup. Její tvorba se často pohybuje na pomezí komiksu, volné ilustrace a grafického románu.",
+                color: "bg-purple-200",
+                image: "wilfling.jpg"
+            },
+            {
+                name: "Martina Fischmeister",
+                url: "https://fischmeister.art/",
+                category: "czech",
+                tags: ["Komiks", "Ilustrace", "Grafický román"],
+                desc: "Je jedna z nejvýraznějších a nejoriginálnějších představitelek současné mladé generace českého komiksu a ilustrace. Její tvorba vybočuje z řady svou syrovostí, odvahou a unikátním vizuálním jazykem.",
+                color: "bg-orange-200",
+                image: "fischmeister.jpg"
+            },
+            {
+                name: "Tomáš Bezděčka",
+                url: "https://www.instagram.com/vkanclu/",
+                category: "czech",
+                tags: ["V kanclu", "Humor", "Minimalismus"],
+                desc: "Pracoval na domácích i hollywoodských projektech, tvoří reklamy, animace a komiskové stripy.",
+                color: "bg-grey-25",
+                image: "vkanclu.jpg"
+            },
+            {
+                name: "Little Color (Kopečtí)",
+                url: "https://www.littlecolor.com/",
+                category: "czech", // Ponecháno czech pro filtr, umístění vizuálně zde
+                tags: ["Koncept art", "Ilustrace", "Fantasy"],
+                desc: "Tvůrčí duo Tomáš Kopecký & Tereza Kopecká. Zaměřují se na concept art, ilustraci a vizuální development.",
+                color: "bg-purple-100",
+                image: "kopec.jpg"
+            },
+            {
+                name: "Kája Saudek",
+                url: "https://kajasaudek.cz/?page_id=115",
+                category: "czech",
+                tags: ["Komiks", "Ilustrace", "Tradice", "Výrazný styl", "Vliv na mladší generace"],
+                desc: "Kája Saudek (1935–2015) je král českého komiksu. Jeho tvorba je zcela unikátní, rozpoznatelná na první pohled a pro českou kulturu naprosto zásadní.",
+                color: "bg-yellow-300",
+                image: "saudek.jpg"
+            },
 
             // --- INSTITUTIONS & OTHERS ---
             {
@@ -494,7 +549,7 @@
                 category: "edu",
                 tags: ["Komunita", "Ženy v komiksu", "Eventy"],
                 desc: "Mezinárodní platforma podporující autorky komiksů. Česká pobočka pořádá symposia.",
-                color: "bg-pink-50",
+                color: "bg-pink-100",
                 image: "laydeez.jpg"
             },
             {
@@ -503,20 +558,18 @@
                 category: "edu",
                 tags: ["Sborník", "Kultovní", "Český komiks"],
                 desc: "Legendární český komiksový sborník mapující to nejlepší z domácí i světové scény.",
-                color: "bg-red-50",
+                color: "bg-red-300",
                 image: "aargh.jpg"
             },
-            // NOVÝ: Tomáš a Tereza Kopečtí (vedle AARGH!)
             {
-                name: "Little Color (Kopečtí)",
-                url: "https://www.littlecolor.com/",
-                category: "czech", // Ponecháno czech pro filtr, umístění vizuálně zde
-                tags: ["Koncept art", "Ilustrace", "Fantasy"],
-                desc: "Tvůrčí duo Tomáš Kopecký & Tereza Kopecká. Zaměřují se na concept art, ilustraci a vizuální development.",
-                color: "bg-purple-100",
-                image: "kopec.jpg"
-            },
-            
+                name: "Crew",
+                url: "https://www.obchod.crew.cz/kategorie-21653/komiks/crew-magazin",
+                category: "czech",
+                tags: ["Magazín", "Přehled českých i světových komiksů", "Publicistika"],
+                desc: "Magazín vznikl v roce 1997 díky skupině nadšenců (Petr Litoš, Jiří Pavlovský, Štěpán Kopřiva a další). Jejich cílem bylo ukázat, že komiks není jen čtení pro děti, ale plnohodnotné médium pro dospělé, které může být temné, chytré i brutální.",
+                color: "bg-red-300",
+                image: "crew.jpg"
+            },      
             {
                 name: "Komiksová databáze",
                 url: "https://comicsdb.cz/",
@@ -551,7 +604,7 @@
                 category: "edu",
                 tags: ["Festival", "Ilustrace", "Komiks"],
                 desc: "Mezinárodní festival ilustrace a komiksu v Praze. Přehlídka toho nejčerstvějšího.",
-                color: "bg-yellow-50",
+                color: "bg-orange-200",
                 image: "lustr.jpg"
             },
              {
